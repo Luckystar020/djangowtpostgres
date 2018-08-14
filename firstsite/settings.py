@@ -56,7 +56,7 @@ TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
         # Add Path Template
-        'DIRS': ['tableviews/view'],
+        'DIRS': ['tableviews/view','tableviews/controller'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -126,3 +126,11 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/2.1/howto/static-files/
 
 STATIC_URL = '/static/'
+
+# setting directory for call file css or js
+STATICFILES_DIRS =[
+'/Users/jubjib/Documents/firstsite/djangowtpostgres/tableviews/view/static',
+
+]
+
+# STATIC_ROOT = '/Users/jubjib/Documents/firstsite/djangowtpostgres/tableviews/view/static'
