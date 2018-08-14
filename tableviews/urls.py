@@ -1,8 +1,8 @@
 from django.urls import path
 
-from . import views
+from tableviews.controller import pr,po
 
 urlpatterns = [
-    path('', views.index, name='index'),
-    path('about/', views.about, name='about'),
+    path('', pr.index, name='index'),
+    path('about/', po.about, name='about'),
 ]
