@@ -1,0 +1,68 @@
+1.Global install python2 or 3
+    " brew install python@2 " or " brew install python3 "
+
+2.Unlink or link python
+    " brew unlink python && brew link python "
+
+3.Install pip
+    " sudo easy_install pip "
+
+4.Update pip
+    " pip install -U pip " 
+
+5.Clone virtaulenv Django Framework
+    " git clone https://github.com/django/django.git "
+
+6.Install Django Framework
+    " pip install -e django/ "
+
+7.Install package postgresql for python
+    " pip install psycopg2 "
+
+8.Create project
+    " django-admin startproject projectname "
+
+9.Go to path project
+    " cd ./projectname "
+
+10.Create app in project
+    " python manage.py startapp nameapp(s) "
+
+11.Setting env project at path ./nameproject/nameproject/setting.py
+    " sudo nano setting.py "
+
+        #Database
+        DATABASES = {
+            'default': {
+                'ENGINE': 'django.db.backends.postgresql',
+                'NAME': 'name_db',
+                'USER': 'your_user',
+                'PASSWORD': 'your_pass',
+                'HOST': 'host/link',
+                'PORT': 'port',
+            }
+        }
+
+        #Template
+        TEMPLATES = [
+            {
+                'BACKEND': 'django.template.backends.django.DjangoTemplates',
+                # Add Path Template
+                'DIRS': ['yourpath/template'], <----- This is path template in Project
+                'APP_DIRS': True,
+                'OPTIONS': {
+                    'context_processors': [
+                        'django.template.context_processors.debug',
+                        'django.template.context_processors.request',
+                        'django.contrib.auth.context_processors.auth',
+                        'django.contrib.messages.context_processors.messages',
+                    ],
+                },
+            },
+        ]
+
+12.When setting env database run command
+    " python manage.py migrate "
+
+13.Command run server
+    " python manage.py runserver "

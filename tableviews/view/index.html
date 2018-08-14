@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+    <!-- <link rel="stylesheet" href="{% static 'css/Templates.css' %}"> -->
+    <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta http-equiv="X-UA-Compatible" content="ie=edge">
+      <title>Index</title>
+  </head>
+
+  <body>
+    <div class="container-fluid">
+      <div class="row table-responsive">
+        <div class="col-md-2">
+        </div> <!-- end div col-md2 -->
+        <div class="col-md-8">
+          <h3 class="text-center" >This is a draft table</h3>
+            <table class="table table-hover table-stripped">
+              <thead>
+                <tr>
+                  <th>id</th>
+                  <th>user_id</th>
+                  <th>name</th>
+                  <th>surname</th>
+                  <th>age</th>
+                </tr>
+              </thead>
+              <tbody>
+
+    <!-- loop for from django -->
+                {% for user in users %}
+                <tr>
+                  <!-- <td>{{user.id}}</td> -->
+                  <td>{{user.id}}</td>
+                  <td>{{user.user_id}}</td>
+                  <td>{{user.name}}</td>
+                  <td>{{user.surname}}</td>
+                  <td>{{user.age}}</td>
+                </tr>
+                {% endfor %}
+
+              </tbody>
+            </table>
+        </div> <!-- end div col-md8 -->
+        <div class="col-md-2">
+        </div> <!-- end div col-md2 -->
+      </div> <!-- end div row1 -->
+      <div class="row">
+        <div class="col-md-2"></div>
+        <div class="col-md-8"><a href="about/">Click changing page</a></div>
+        <div class="col-md-2"></div>
+      </div> <!-- end div row2 -->
+      <div class="row">
+        <div class="col-md-2"></div>
+        <div class="col-md-8"><button type="button" name="button"><a href="about/">Click changing page</a></button></div>
+        <div class="col-md-2"></div>
+      </div> <!-- end div row3 -->
+    </div> <!-- end div contrainer fluid -->
+  </body>
+</html>
