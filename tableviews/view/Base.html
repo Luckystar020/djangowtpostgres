@@ -3,29 +3,85 @@
   <head>
     {% load static %}
     <meta charset="utf-8">
+    <!-- RESET CSS -->
     <link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.min.css' %}">
-    <link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap-theme.min.css' %}">
+    <!-- BOOTSTRAP TWITTER -->
+    <link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.min.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap-responsive.min.css' %}">
+    <!-- CUSTOM CSS -->
     <link rel="stylesheet" type="text/css" href="{% static 'css/Templates.css' %}">
-    <link rel="stylesheet" type="text/css" href="{% static 'fontawesome/css/fontawesome.min.css'%}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/chosen/chosen.min.css'%}">
+    <!-- JSCRIPT -->
+    <script type="text/javascript" src="{% static 'js/jquery.js'%}"></script>
+    <script type="text/javascript" src="{% static 'js/bootstrap.min.js'%}"></script>
+    <script type="text/javascript" src="{% static 'js/jquery.fileDownload.js'%}"></script>
+    <script type="text/javascript" src="{% static 'js/jquery.dynatable.js'%}"></script>
+    <script type="text/javascript" src="{% static 'js/numeral/numeral.min.js'%}"></script>
+    <script type="text/javascript" src="{% static 'js/moment.min.js'%}"></script>
+    <!-- JQUERY UI -->
+    <link rel="stylesheet" type="text/css" href="{% static 'css/smoothness/jquery-ui-1.9.1.custom.css'%}">
+    <script type="text/javascript" src="{% static 'js/jquery-ui-1.9.1.custom.min.js'%}"></script>
+    <script type="text/javascript" src="{% static 'js/multiselect.min.js'%}"></script>
+    <script type="text/javascript" src="{% static 'js/jquery.inputmask.bundle.min.js'%}"></script>
+    <script type="text/javascript" src="{% static 'js/jquery-ui-1.9.1.custom.min.js'%}"></script>
+    <script type="text/javascript" src="{% static 'js/essoft_mask.js'%}"></script>
+    <!-- SELECT2 -->
+    <link rel="stylesheet" type="text/css" href="{% static 'css/select2/css/select2.css'%}">
+    <script type="text/javascript" src="{% static 'js/select2/js/select2.min.js'%}"></script>
+    <!-- Session Expire -->
+    <link rel="stylesheet" type="text/css" href="{% static 'css/chosen/chosen.css'%}">
+    <script type="text/javascript" src="{% static 'js/bootstrap-session-timeout.js'%}"></script>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/jquery.dynatable.css'%}">
+    <script type="text/javascript" src="{% static 'js/chosen/chosen.jquery.min.js'%}"></script>
+    <!-- DoubleScroll -->
+    <script type="text/javascript" src="{% static 'js/jq_double_scroll/jquery.doubleScroll.js'%}"></script>
+    <!-- Pace loader -->
+    <script type="text/javascript" src="{% static 'js/pace/pace.js'%}"></script>
+    <!-- TEMPLATE -->
+    <link rel="stylesheet" type="text/css" href="{% static 'css/fontawesome/css/fontawesome.min.css'%}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style1.css'%}">
+
 
     <title> {% block title %} {% endblock %}</title>
-    <h1 class="amheader">AM
-      <small class="versionam">V.2</small>
-    </h1>
+    <div id="header" style="position:relative;">
+	<div style="position:absolute; bottom:0; left:0;"><h1 style="color:#F90; letter-spacing:5px;">
+    AM
+    <small style="color:#cccccc; font-size:14px; letter-spacing:0px;">
+      V 1.0.0
+      <!-- <span id="script_revision">
+        Unable to open file in ../.git_code/HEAD!
+      </span> -->
+    </small>
+  </h1>
+</div>
+<div style="position:absolute; bottom:0; right:0;">
+  <div style="margin-bottom:3px;">
+      <!-- <div class="dropdown">
+        <a href="#" class="dropdown-toggle btn btn-small" data-toggle="dropdown"><i class="icon-user"></i> admin <b class="caret"></b></a>
+        <ul class="dropdown-menu pull-right" role="menu" aria-labelledby="dLabel">
+          <li><a href="/dev_test/am_dev/users/organization_chart">Organization Chart</a></li>
+          <li><a href="/dev_test/am_dev/users/edit_profile">Update Profile</a></li>
+          <li><a href="/dev_test/am_dev/users/change_password">Change password</a></li>
+          <li><a href="#" class="logout">Log out</a></li>
+        </ul>
+      </div> -->
+		</div>
+	</div>
+</div>
   </head>
   <body>
     <section>
-      <nav class="navbar navbar-default" style="margin:15px;">
+      <nav class="navbar navbar-default" style="margin:0px 15px 0px 15px;">
       <div class="container-fluid">
         <ul class="nav navbar-nav">
           <li class="dropdown">
-            <a class="dropdown-toggle" href="#">
+            <a href="/requestusers">
               Accounting Practise
               <b class="caret"></b>
             </a>
             </li>
           <li class="dropdown">
-            <a href="about">
+            <a href="/about">
               Financial Department
               <b class="caret"></b>
             </a>
@@ -58,8 +114,12 @@
       </div>
     </nav>
     </section>
-    <div style="background-color:#FFF; margin:15px;">
-      {% block content %}{% endblock %}
-    </div>
+      <div style="background-color:#FFF; margin:0px 15px 0px 15px;">
+        <div id="head_content">
+
+        </div>
+        {% block content %}{% endblock %}
+      </div>
+
   </body>
 </html>
