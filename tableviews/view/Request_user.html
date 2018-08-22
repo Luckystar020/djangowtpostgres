@@ -1,8 +1,6 @@
 {% extends 'Base.html' %}
 {% block title %}RequestUsers{% endblock%}
 {% block content %}
-<div class="container-fluid">
-  <div class="main">
     <div class="pull-left">
       <span class="title_page">Request Users</span>
     </div>
@@ -10,17 +8,16 @@
       <span class="label label-warning title_page_label">PUR-001</span>
       <i class="fa fa-book fa-lg" style="color:lightgray;"></i>
     </div>
-  </div>
-</div>
+    <div class="clearfix"></div>
 <hr>
 <div class="row-fluid">
     <div class="span12">
       <div id="setmessaget" style="display:none;">
-
       </div>
     </div>
 </div>
 
+<!-- Calendar Script -->
 <script type="text/javascript">
     $(document).ready(function () {
         $.fn.ForceNumericOnly =

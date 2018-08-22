@@ -44,6 +44,7 @@
 
     <title> {% block title %} {% endblock %}</title>
     <div id="header" style="position:relative;">
+
 	<div style="position:absolute; bottom:0; left:0;"><h1 style="color:#F90; letter-spacing:5px;">
     AM
     <small style="color:#cccccc; font-size:14px; letter-spacing:0px;">
@@ -89,7 +90,7 @@
           <li class="dropdown">
             <a class="dropdown-toggle" href="#">
               Accounting Department
-              <b class="caret"></b>
+              <b class="tcaret"></b>
             </a>
           </li>
           <li class="dropdown">
@@ -115,11 +116,19 @@
     </nav>
     </section>
       <div style="background-color:#FFF; margin:0px 15px 0px 15px;">
-        <div id="head_content">
-
+        <div id="head_content"></div>
+        <div id="content">
+          <div id="setmessaget">
+            <div class="main">
+              {% block content %}{% endblock %}
+            </div>
+          </div>
         </div>
-        {% block content %}{% endblock %}
       </div>
 
   </body>
+  <div id="bottom"></div>
+  <div id="footer">
+    Designed by Essoft
+  </div>
 </html>
